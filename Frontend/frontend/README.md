@@ -21,7 +21,7 @@ npm install react-router-dom
 ```
 5) Create Docker file for Frontend
 ```shell
-cd Dockerfile.frontend
+touch Dockerfile.frontend
 ```
 
 6) 
