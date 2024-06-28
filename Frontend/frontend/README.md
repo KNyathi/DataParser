@@ -15,4 +15,8 @@ npx create-react-app frontend
 npm install axios
 ```
 
-4)   
+4) Setting up routing
+```shell
+npm install react-router-dom
+```
+5) 
