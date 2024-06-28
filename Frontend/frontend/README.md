@@ -19,4 +19,9 @@ npm install axios
 ```shell
 npm install react-router-dom
 ```
-5) 
+5) Create Docker file for Frontend
+```shell
+cd Dockerfile.frontend
+```
+
+6) 
