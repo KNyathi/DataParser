@@ -17,3 +17,5 @@ This will start the PostgreSQL database, Django Backend, and React Frontend in s
 3) Backend is running in port 8000 and Frontend in 3000. You may adjust the ports to fit your preferences.
 
 ### Datasource is hh.ru and we are using BeautifulSoap for parsing data.
+
+4) Further instructions are available on each directory for both Frontend and Backend.
