@@ -41,6 +41,11 @@ add rest_framework to settings.py inside your project directory
 ```shell
 pip install django-filter
 ```
-7)   
+7) Create Dockerfile for Backend
+```shell
+touch Dockerfile.backend
+```
+
+8)   
 
  
