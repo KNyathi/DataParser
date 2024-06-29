@@ -5,7 +5,7 @@ import requests
 from myapp.models import Applicant
 
 class Command(BaseCommand):
-    help = 'Scrape data from hh.ru'
+    help = 'Scrape data from hh.ru for applicants'
 
     def handle(self, *args, **kwargs):
         url = "https://hh.ru/search/resume?text=python&area=1&isDefaultArea=true&exp_period=all_time&logic=normal&pos=full_text&hhtmFrom=vacancy_search_list&hhtmFromLabel=resume_search_line"
