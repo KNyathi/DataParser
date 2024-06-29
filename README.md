@@ -38,6 +38,6 @@ python manage.py migrate
 - BeautifulSoup: It parses the HTML response from the URL.
 - Vacancy Model: The script creates or updates Vacancy objects in our Django database based on the scraped data. It checks if a Vacancy with the same title and company exists and updates its fields if it does, or creates a new one if it doesn't.
 - Applicant Model: The script creates or retrieves an Applicant object based on hardcoded applicant data (applicant_data).
-- Linking: It links each applicant to the corresponding vacancy they apply for using vacancy_obj.applicants.add(applicant_obj).
+
 
 9) Further instructions are available on each directory for both Frontend and Backend.
