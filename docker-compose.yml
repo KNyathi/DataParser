@@ -14,7 +14,7 @@ services:
     build:
       context: ./Backend/backend
       dockerfile: Dockerfile.backend
-    command: py manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - ./Backend/backend:/app
     ports:
@@ -22,7 +22,7 @@ services:
     depends_on:
       - db
     environment:
-      - DATABASE_URL=postgres://postgres:Nyathik123@db/postgres
+      - DATABASE_URL=postgres://postgres:Nyathik123@db:5432/postgres
 
   frontend:
     build:
