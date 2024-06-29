@@ -57,6 +57,6 @@ pip install requests beautifulsoup4
 9) Execute the following command to scrape data and populate the database
     ```shell
     python manage.py scrape_hh
-```
+    ```
 
  
