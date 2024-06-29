@@ -9,3 +9,5 @@ router.register(r'vacancies', VacancyViewSet)
 urlpatterns = [
     path('', include(router.urls)),
 ]
+
+

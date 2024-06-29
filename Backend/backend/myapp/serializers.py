@@ -7,8 +7,6 @@ class ApplicantSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class VacancySerializer(serializers.ModelSerializer):
-    applicants = ApplicantSerializer(many=True, read_only=True)
-
     class Meta:
         model = Vacancy
         fields = '__all__'

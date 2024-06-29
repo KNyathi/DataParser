@@ -1,5 +1,4 @@
-from rest_framework import viewsets
-from rest_framework import filters
+from rest_framework import viewsets, filters
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import Applicant, Vacancy
 from .serializers import ApplicantSerializer, VacancySerializer
@@ -8,14 +7,14 @@ class ApplicantViewSet(viewsets.ModelViewSet):
     queryset = Applicant.objects.all()
     serializer_class = ApplicantSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_fields = ['name', 'surname', 'country_of_origin', 'native_language']
-    search_fields = ['name', 'surname', 'country_of_origin', 'native_language']
-    ordering_fields = ['name', 'surname', 'age']
+    filterset_fields = ['title', 'age', 'status', 'experience_duration', 'last_employer', 'last_position']
+    search_fields = ['title', 'age', 'status', 'experience_duration', 'last_employer', 'last_position']
+    ordering_fields = ['title', 'age', 'experience_duration', 'last_employer', 'last_position']
 
 class VacancyViewSet(viewsets.ModelViewSet):
     queryset = Vacancy.objects.all()
     serializer_class = VacancySerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_fields = ['title', 'salary', 'region', 'required_experience', 'work_format', 'company']
-    search_fields = ['title', 'skills', 'company']
-    ordering_fields = ['title', 'salary', 'region']
+    filterset_fields = ['title', 'compensation', 'experience', 'employer', 'location']
+    search_fields = ['title', 'compensation', 'experience', 'employer', 'location']
+    ordering_fields = ['title', 'compensation', 'experience', 'employer', 'location']
