@@ -46,10 +46,17 @@ pip install django-filter
 touch Dockerfile.backend
 ```
 
-8) All further implementations were made from within docker. Web Scraping library used is BeautifulSoup4 for parsing data from hh.ru
+## All further implementations are made from within docker.
+```shell
+docker-compose run backend shell
+```
+8) Web Scraping library used is BeautifulSoup4 for parsing data from hh.ru
 ```shell
 pip install requests beautifulsoup4
 ```
-9) 
+9) Execute the following command to scrape data and populate the database
+    ```shell
+    python manage.py scrape_hh
+```
 
  
