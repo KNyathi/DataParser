@@ -30,4 +30,5 @@ python manage.py migrate
    ```shell
    docker-compose exec frontend bash
    ```
-6) Further instructions are available on each directory for both Frontend and Backend.
+6) Axios is used to connect frontend to backend
+7) Further instructions are available on each directory for both Frontend and Backend.
