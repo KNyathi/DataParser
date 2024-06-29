@@ -18,4 +18,16 @@ This will start the PostgreSQL database, Django Backend, and React Frontend in s
 
 ### Datasource is hh.ru and we are using BeautifulSoap for parsing data.
 
-4) Further instructions are available on each directory for both Frontend and Backend.
+4) To access the backend shell from within docker, type the command below
+```shell
+docker-compose exec backend bash
+```
+To make migrations, you can then type
+```shell
+python manage.py migrate
+```
+5) To access the frontend shell from within docker, type the command below
+   ```shell
+   docker-compose exec frontend bash
+   ```
+6) Further instructions are available on each directory for both Frontend and Backend.
