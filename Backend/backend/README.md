@@ -69,6 +69,12 @@ REST_FRAMEWORK = {
     ],
 }
 
+
+Install python-decouple to store sensitive info in .env file
+```shell
+pip install python-decouple
+```
+
 7) Create Dockerfile for Backend
 ```shell
 touch Dockerfile.backend
