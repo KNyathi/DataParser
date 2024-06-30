@@ -41,6 +41,34 @@ add rest_framework to settings.py inside your project directory
 ```shell
 pip install django-filter
 ```
+
+Install django-cors headers
+
+```shell
+pip install django-cors-headers
+```
+settings.py
+
+```shell
+CORS_ORIGIN_ALLOW_ALL = True
+
+INSTALLED_APPS = [
+     ...,
+    'corsheaders',
+]
+
+MIDDLEWARE = [
+    .....,
+    'corsheaders.middleware.CorsMiddleware',
+]
+
+REST_FRAMEWORK = {
+    ..., 
+    'DEFAULT_PERMISSION_CLASSES':[
+        'rest_framework.permissions.AllowAny',
+    ],
+}
+
 7) Create Dockerfile for Backend
 ```shell
 touch Dockerfile.backend
