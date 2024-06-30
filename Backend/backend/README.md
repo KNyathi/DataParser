@@ -48,7 +48,7 @@ touch Dockerfile.backend
 
 ## All further implementations are made from within docker.
 ```shell
-docker-compose run backend shell
+docker-compose exec backend bash
 ```
 8) Web Scraping library used is BeautifulSoup4 for parsing data from hh.ru
 ```shell
@@ -56,7 +56,8 @@ pip install requests beautifulsoup4
 ```
 9) Execute the following command to scrape data and populate the database
     ```shell
-    python manage.py scrape_hh
+    python manage.py extract_applicants
+    python manage.py extract_vacancies
     ```
 
  
