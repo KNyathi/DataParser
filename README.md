@@ -39,5 +39,13 @@ python manage.py migrate
 - Vacancy Model: The script creates or updates Vacancy objects in our Django database based on the scraped data. It checks if a Vacancy with the same title and company exists and updates its fields if it does, or creates a new one if it doesn't.
 - Applicant Model: The script creates or retrieves an Applicant object based on hardcoded applicant data (applicant_data).
 
+7) Create a .env file to store your sensitive information in the root directory
+   ```shell
+   touch .env
+   ```
 
+8) Create a .gitignore file in the root directory to ignore the .env file
+   ```shell
+   touch .gitignore
+   ```
 9) Further instructions are available on each directory for both Frontend and Backend.
