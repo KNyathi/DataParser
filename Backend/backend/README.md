@@ -71,7 +71,9 @@ REST_FRAMEWORK = {
 
 
 Install python-decouple to store sensitive info in .env file
+
 ```shell
+
 pip install python-decouple
 ```
 
