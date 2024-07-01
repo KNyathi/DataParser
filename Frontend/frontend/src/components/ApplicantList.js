@@ -3,6 +3,7 @@ import ApplicantItem from './ApplicantItem';
 import { TextField, Container, Grid, Paper, Typography } from '@mui/material';
 import axios from 'axios';
 import useStyles from './styles';
+import Analytics from './Analytics';
 
 const ApplicantList = () => {
   const classes = useStyles();
@@ -31,6 +32,7 @@ const ApplicantList = () => {
 
   return (
     <Container className={classes.container}>
+      <Analytics type="applicants" />
       <Typography variant="h4" className={classes.heading}>Applicants</Typography>
       <Grid container spacing={2} className={classes.filterContainer}>
         <Grid item xs={12} sm={6} md={4}>

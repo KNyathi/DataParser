@@ -3,6 +3,7 @@ import VacancyItem from './VacancyItem';
 import { TextField, Container, Grid, Paper, Typography } from '@mui/material';
 import axios from 'axios';
 import useStyles from './styles';
+import Analytics from './Analytics';
 
 const VacancyList = () => {
   const classes = useStyles();
@@ -30,6 +31,7 @@ const VacancyList = () => {
 
   return (
     <Container className={classes.container}>
+      <Analytics type="vacancies" />
       <Typography variant="h4" className={classes.heading}>Vacancies</Typography>
       <Grid container spacing={2} className={classes.filterContainer}>
         <Grid item xs={12} sm={6} md={4}>
