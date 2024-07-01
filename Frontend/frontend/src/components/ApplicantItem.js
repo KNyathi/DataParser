@@ -1,19 +1,25 @@
 import React from 'react';
-import { Card, CardContent, Typography } from '@mui/material';
+import { Card, CardContent, Typography, CardActions, Button } from '@mui/material';
+import useStyles from './styles';
 
-const ApplicantItem = ({ applicant }) => (
-  <Card style={{ margin: '20px 0' }}>
-    <CardContent>
-      <Typography variant="h5">{applicant.title}</Typography>
-      <Typography variant="body2"><strong>Age:</strong> {applicant.age}</Typography>
-      <Typography variant="body2"><strong>Status:</strong> {applicant.status}</Typography>
-      <Typography variant="body2"><strong>Experience Duration:</strong> {applicant.experience_duration}</Typography>
-      <Typography variant="body2"><strong>Last Employer:</strong> {applicant.last_employer}</Typography>
-      <Typography variant="body2"><strong>Last Position:</strong> {applicant.last_position}</Typography>
-      <Typography variant="body2"><strong>Employment Dates:</strong> {applicant.employment_dates}</Typography>
-      <Typography variant="body2"><a href={applicant.link} target="_blank" rel="noopener noreferrer">Resume Link</a></Typography>
-    </CardContent>
-  </Card>
-);
+const ApplicantItem = ({ applicant }) => {
+  const classes = useStyles();
+  
+  return (
+    <Card className={classes.card}>
+      <CardContent>
+        <Typography variant="h6" component="div">{applicant.title}</Typography>
+        <Typography color="textSecondary">{applicant.status}</Typography>
+        <Typography variant="body2" component="p">{applicant.age}</Typography>
+        <Typography variant="body2" component="p">{applicant.experience_duration}</Typography>
+        <Typography variant="body2" component="p">{applicant.last_employer}</Typography>
+        <Typography variant="body2" component="p">{applicant.last_position}</Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small" color="primary" href={applicant.link} target="_blank">Learn More</Button>
+      </CardActions>
+    </Card>
+  );
+};
 
 export default ApplicantItem;

@@ -9,7 +9,7 @@ const App = () => (
     <AppBar position="static">
       <Toolbar>
         <Typography variant="h6" style={{ flexGrow: 1 }}>
-          Job Portal
+          Data Parser Portal
         </Typography>
         <Button color="inherit" component={Link} to="/vacancies">Vacancies</Button>
         <Button color="inherit" component={Link} to="/applicants">Applicants</Button>

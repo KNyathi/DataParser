@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import ApplicantItem from './ApplicantItem';
-import { TextField, Container } from '@mui/material';
+import { TextField, Container, Grid, Paper, Typography } from '@mui/material';
 import axios from 'axios';
+import useStyles from './styles';
 
 const ApplicantList = () => {
+  const classes = useStyles();
   const [applicants, setApplicants] = useState([]);
   const [filter, setFilter] = useState({
     title: '',
@@ -28,21 +30,37 @@ const ApplicantList = () => {
   };
 
   return (
-    <Container>
-      <h2>Applicants</h2>
-      <div className="filters">
-        <TextField label="Name" name="title" onChange={handleFilterChange} />
-        <TextField label="Age" name="age" onChange={handleFilterChange} />
-        <TextField label="Status" name="status" onChange={handleFilterChange} />
-        <TextField label="Experience Duration" name="experience_duration" onChange={handleFilterChange} />
-        <TextField label="Last Employer" name="last_employer" onChange={handleFilterChange} />
-        <TextField label="Last Position" name="last_position" onChange={handleFilterChange} />
-      </div>
-      <div className="applicant-list">
+    <Container className={classes.container}>
+      <Typography variant="h4" className={classes.heading}>Applicants</Typography>
+      <Grid container spacing={2} className={classes.filterContainer}>
+        <Grid item xs={12} sm={6} md={4}>
+          <TextField fullWidth label="Name" name="title" onChange={handleFilterChange} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <TextField fullWidth label="Age" name="age" onChange={handleFilterChange} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <TextField fullWidth label="Status" name="status" onChange={handleFilterChange} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <TextField fullWidth label="Experience Duration" name="experience_duration" onChange={handleFilterChange} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <TextField fullWidth label="Last Employer" name="last_employer" onChange={handleFilterChange} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <TextField fullWidth label="Last Position" name="last_position" onChange={handleFilterChange} />
+        </Grid>
+      </Grid>
+      <Grid container spacing={3} className={classes.listContainer}>
         {applicants.map(applicant => (
-          <ApplicantItem key={applicant.id} applicant={applicant} />
+          <Grid item xs={12} sm={6} md={4} key={applicant.id}>
+            <Paper className={classes.paper}>
+              <ApplicantItem applicant={applicant} />
+            </Paper>
+          </Grid>
         ))}
-      </div>
+      </Grid>
     </Container>
   );
 };

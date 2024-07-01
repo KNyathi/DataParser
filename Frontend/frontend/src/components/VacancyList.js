@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import VacancyItem from './VacancyItem';
-import { TextField, Container } from '@mui/material';
+import { TextField, Container, Grid, Paper, Typography } from '@mui/material';
 import axios from 'axios';
+import useStyles from './styles';
 
 const VacancyList = () => {
+  const classes = useStyles();
   const [vacancies, setVacancies] = useState([]);
   const [filter, setFilter] = useState({
     title: '',
@@ -27,20 +29,34 @@ const VacancyList = () => {
   };
 
   return (
-    <Container>
-      <h2>Vacancies</h2>
-      <div className="filters">
-        <TextField label="Job Title" name="title" onChange={handleFilterChange} />
-        <TextField label="Compensation" name="compensation" onChange={handleFilterChange} />
-        <TextField label="Experience" name="experience" onChange={handleFilterChange} />
-        <TextField label="Employer" name="employer" onChange={handleFilterChange} />
-        <TextField label="Location" name="location" onChange={handleFilterChange} />
-      </div>
-      <div className="vacancy-list">
+    <Container className={classes.container}>
+      <Typography variant="h4" className={classes.heading}>Vacancies</Typography>
+      <Grid container spacing={2} className={classes.filterContainer}>
+        <Grid item xs={12} sm={6} md={4}>
+          <TextField fullWidth label="Job Title" name="title" onChange={handleFilterChange} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <TextField fullWidth label="Compensation" name="compensation" onChange={handleFilterChange} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <TextField fullWidth label="Experience" name="experience" onChange={handleFilterChange} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <TextField fullWidth label="Employer" name="employer" onChange={handleFilterChange} />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4}>
+          <TextField fullWidth label="Location" name="location" onChange={handleFilterChange} />
+        </Grid>
+      </Grid>
+      <Grid container spacing={3} className={classes.listContainer}>
         {vacancies.map(vacancy => (
-          <VacancyItem key={vacancy.id} vacancy={vacancy} />
+          <Grid item xs={12} sm={6} md={4} key={vacancy.id}>
+            <Paper className={classes.paper}>
+              <VacancyItem vacancy={vacancy} />
+            </Paper>
+          </Grid>
         ))}
-      </div>
+      </Grid>
     </Container>
   );
 };

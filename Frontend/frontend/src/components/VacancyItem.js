@@ -1,17 +1,24 @@
 import React from 'react';
-import { Card, CardContent, Typography } from '@mui/material';
+import { Card, CardContent, Typography, CardActions, Button } from '@mui/material';
+import useStyles from './styles';
 
-const VacancyItem = ({ vacancy }) => (
-  <Card style={{ margin: '20px 0' }}>
-    <CardContent>
-      <Typography variant="h5">{vacancy.title}</Typography>
-      <Typography variant="subtitle1">{vacancy.employer}</Typography>
-      <Typography variant="body2">{vacancy.location}</Typography>
-      <Typography variant="body2"><strong>Compensation:</strong> {vacancy.compensation}</Typography>
-      <Typography variant="body2"><strong>Experience:</strong> {vacancy.experience}</Typography>
-      <Typography variant="body2"><a href={vacancy.link} target="_blank" rel="noopener noreferrer">Job Link</a></Typography>
-    </CardContent>
-  </Card>
-);
+const VacancyItem = ({ vacancy }) => {
+  const classes = useStyles();
+  
+  return (
+    <Card className={classes.card}>
+      <CardContent>
+        <Typography variant="h6" component="div">{vacancy.title}</Typography>
+        <Typography color="textSecondary">{vacancy.employer}</Typography>
+        <Typography variant="body2" component="p">{vacancy.location}</Typography>
+        <Typography variant="body2" component="p">{vacancy.experience}</Typography>
+        <Typography variant="body2" component="p">{vacancy.compensation}</Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small" color="primary" href={vacancy.link} target="_blank">Learn More</Button>
+      </CardActions>
+    </Card>
+  );
+};
 
 export default VacancyItem;
