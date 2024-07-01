@@ -1,17 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Applicants from './components/Applicants';
-import Vacancies from './components/Vacancies';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import VacancyList from './components/VacancyList';
+import ApplicantList from './components/ApplicantList';
+import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material';
 
-function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/applicants" element={<Applicants />} />
-                <Route path="/vacancies" element={<Vacancies />} />
-            </Routes>
-        </Router>
-    );
-}
+const App = () => (
+  <Router>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="h6" style={{ flexGrow: 1 }}>
+          Job Portal
+        </Typography>
+        <Button color="inherit" component={Link} to="/vacancies">Vacancies</Button>
+        <Button color="inherit" component={Link} to="/applicants">Applicants</Button>
+      </Toolbar>
+    </AppBar>
+    <Container>
+      <Routes>
+        <Route path="/vacancies" element={<VacancyList />} />
+        <Route path="/applicants" element={<ApplicantList />} />
+      </Routes>
+    </Container>
+  </Router>
+);
 
 export default App;
