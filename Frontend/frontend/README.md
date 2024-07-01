@@ -24,4 +24,8 @@ npm install react-router-dom
 touch Dockerfile.frontend
 ```
 
-6) 
+6) For the User Interface (UI) we are using Material-UI. Installation command is given below
+   ```shell
+   npm install @mui/material @emotion/react @emotion/styled
+   ```
+    
