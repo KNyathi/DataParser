@@ -28,4 +28,8 @@ touch Dockerfile.frontend
    ```shell
    npm install @mui/material @emotion/react @emotion/styled
    ```
-    
+    install the MUI styles package
+
+   ```shell
+   npm install @mui/styles
+   ```
