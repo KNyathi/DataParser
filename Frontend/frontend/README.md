@@ -40,3 +40,7 @@ a) Install testing libraries
 npm install @testing-library/react @testing-library/jest-dom jest --save-dev
 ```
 
+Install Babel to transform ES6 code to common JS for Jest
+``shell
+npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel-jest
+```
