@@ -34,3 +34,9 @@ touch Dockerfile.frontend
    npm install @mui/styles
    ```
 # Integration tests for frontend components
+
+a) Install testing libraries
+```shell
+npm install @testing-library/react @testing-library/jest-dom jest --save-dev
+```
+
