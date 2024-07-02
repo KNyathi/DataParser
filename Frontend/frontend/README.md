@@ -33,3 +33,4 @@ touch Dockerfile.frontend
    ```shell
    npm install @mui/styles
    ```
+# Integration tests for frontend components
