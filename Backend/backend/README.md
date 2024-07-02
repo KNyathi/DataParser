@@ -95,5 +95,5 @@ pip install requests beautifulsoup4
     python manage.py extract_applicants
     python manage.py extract_vacancies
     ```
-
+# Unit Tests for backend API endpoints
  
