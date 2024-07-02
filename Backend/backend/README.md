@@ -96,4 +96,6 @@ pip install requests beautifulsoup4
     python manage.py extract_vacancies
     ```
 # Unit Tests for backend API endpoints
+![Screenshot (248)](https://github.com/KNyathi/DataParser/assets/124944851/1116bb16-2ec5-4859-9ac1-d3ad4032782a)
+
  
