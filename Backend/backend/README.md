@@ -98,4 +98,6 @@ pip install requests beautifulsoup4
 # Unit Tests for backend API endpoints
 ![Screenshot (248)](https://github.com/KNyathi/DataParser/assets/124944851/1116bb16-2ec5-4859-9ac1-d3ad4032782a)
 
+### the code for tests is found in myapp/tests.py
+
  
