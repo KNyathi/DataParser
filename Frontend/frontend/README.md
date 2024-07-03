@@ -39,12 +39,13 @@ a) Install testing libraries
 ```shell
 npm install @testing-library/react @testing-library/jest-dom jest --save-dev
 ```
-![Screenshot (253)](https://github.com/KNyathi/DataParser/assets/124944851/147059eb-5582-4982-90e5-e8790e577b2c)
-
-
 Install Babel to transform ES6 code to common JS for Jest
 ```shell
 npm install --save-dev @babel/core @babel/preset-env @babel/preset-react babel-jest
 ```
+
+![Screenshot (253)](https://github.com/KNyathi/DataParser/assets/124944851/147059eb-5582-4982-90e5-e8790e577b2c)
+
+### test files are labelled .test.js in components, and the app.test.js is in the react root directory.
 
 
